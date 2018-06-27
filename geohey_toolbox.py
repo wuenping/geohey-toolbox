@@ -20,7 +20,9 @@
  *                                                                         *
  ***************************************************************************/
 """
+from __future__ import absolute_import
 
+from builtins import object
 __author__ = 'GeoHey'
 __date__ = '2016-10-29'
 __copyright__ = '(C) 2016 by GeoHey'
@@ -34,14 +36,14 @@ import sys
 import inspect
 
 from processing.core.Processing import Processing
-from geohey_provider import GeoHeyProvider
+from .geohey_provider import GeoHeyProvider
 
 cmd_folder = os.path.split(inspect.getfile(inspect.currentframe()))[0]
 if cmd_folder not in sys.path:
     sys.path.insert(0, cmd_folder)
 
 
-class GeoHeyPlugin:
+class GeoHeyPlugin(object):
 
     def __init__(self):
         self.provider = GeoHeyProvider()

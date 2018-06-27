@@ -20,6 +20,7 @@
  *                                                                         *
  ***************************************************************************/
 """
+from __future__ import absolute_import
 
 __author__ = 'GeoHey'
 __date__ = '2016-10-29'
@@ -29,19 +30,19 @@ __copyright__ = '(C) 2016 by GeoHey'
 
 __revision__ = '$Format:%H$'
 
-from PyQt4.QtGui import QIcon
+from qgis.PyQt.QtGui import QIcon
 # from processing.tools.system import *
 
 from processing.core.AlgorithmProvider import AlgorithmProvider
 from processing.core.ProcessingConfig import Setting, ProcessingConfig
-from china_offset.offset_wgs84_algorithm import OffsetWGS84Algorithm
-from grid.lambert_grid_algorithm import LambertGridAlgorithm
-from china_offset.wgs2gcj import WGS2GCJ
-from china_offset.gcj2wgs import GCJ2WGS
-from china_offset.gcj2bd import GCJ2BD
-from china_offset.bd2gcj import BD2GCJ
-from china_offset.wgs2bd import WGS2BD
-from china_offset.bd2wgs import BD2WGS
+from .china_offset.offset_wgs84_algorithm import OffsetWGS84Algorithm
+from .grid.lambert_grid_algorithm import LambertGridAlgorithm
+from .china_offset.wgs2gcj import WGS2GCJ
+from .china_offset.gcj2wgs import GCJ2WGS
+from .china_offset.gcj2bd import GCJ2BD
+from .china_offset.bd2gcj import BD2GCJ
+from .china_offset.wgs2bd import WGS2BD
+from .china_offset.bd2wgs import BD2WGS
 
 class GeoHeyProvider(AlgorithmProvider):
 
