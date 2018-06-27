@@ -29,8 +29,8 @@ __copyright__ = '(C) 2016 by GeoHey'
 
 __revision__ = '$Format:%H$'
 
-from PyQt4.QtGui import *
-from processing.tools.system import *
+from PyQt4.QtGui import QIcon
+# from processing.tools.system import *
 
 from processing.core.AlgorithmProvider import AlgorithmProvider
 from processing.core.ProcessingConfig import Setting, ProcessingConfig
@@ -54,7 +54,7 @@ class GeoHeyProvider(AlgorithmProvider):
         self.activate = False
 
         # Load algorithms
-        self.alglist = [WGS2GCJ() , GCJ2WGS(), GCJ2BD(), BD2GCJ(), WGS2BD(), BD2WGS(),  LambertGridAlgorithm()]
+        self.alglist = [WGS2GCJ(), GCJ2WGS(),  GCJ2BD(), BD2GCJ(), WGS2BD(), BD2WGS(),  LambertGridAlgorithm()]
         for alg in self.alglist:
             alg.provider = self
 

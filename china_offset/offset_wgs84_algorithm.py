@@ -29,9 +29,10 @@ __copyright__ = '(C) 2016 by GeoHey'
 
 __revision__ = '$Format:%H$'
 
+import os 
 from PyQt4.QtCore import QSettings
-from qgis.core import QgsVectorFileWriter
-from qgis.core import *
+from qgis.core import QgsVectorFileWriter, QgsMessageLog, QgsFeature, QGis, QgsGeometry, QgsPoint
+from PyQt4.QtGui import QIcon
 
 from processing.core.GeoAlgorithm import GeoAlgorithm
 from processing.core.parameters import ParameterVector
